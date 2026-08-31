@@ -1,0 +1,25 @@
+.dark {
+  background:
+    radial-gradient(circle at 30% 40%, #151130, transparent 60%), #1e223d;
+}
+.light{
+    background: var(--normal-color);
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body,
+body {
+  margin: 1% 10%;
+  background:
+    radial-gradient(circle at 30% 40%, #051f20, transparent 60%), #0a0a12;
+}

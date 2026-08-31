@@ -1,0 +1,8 @@
+@media (max-width: 679px) {
+  .side-bar {
+    display: none;
+  }
+  .expense-list {
+    width: 400px;
+  }
+}
