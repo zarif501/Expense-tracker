@@ -3,4 +3,4 @@ dist/
 build/
 coverage/
 logs/
-test-results/
+test-results/.gitignore
