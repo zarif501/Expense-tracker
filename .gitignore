@@ -1,6 +1,16 @@
-node_models/
+# Dependencies
+node_modules/
+
+# Production build outputs
 dist/
 build/
-coverage/
+
+# Logs & testing
 logs/
-test-results/.gitignore
+coverage/
+test-results/
+
+# Editor & OS artifacts
+.vscode/
+.DS_Store
+src/.DS_Store
