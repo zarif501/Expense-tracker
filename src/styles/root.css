@@ -11,6 +11,7 @@
   --font-secondary: "Space Grotesk", sans-serif;
 
   /* text-size */
+  --text-xs: clamp(0.75rem, 0.3vw + 0.65rem, 0.95rem);
   --text-sm: clamp(0.85rem, 0.3vw + 0.75rem, 1rem);
   --text-size: clamp(1.1rem, 0.6vw + 0.95rem, 1.35rem);
   --text-lg: clamp(2.5rem, 3vw + 1.5rem, 3.5rem);

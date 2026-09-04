@@ -1,0 +1,65 @@
+.state {
+margin: 2rem auto;
+  width: 50%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5em;
+  border: 1px solid var(--secondary-color);
+  border-radius: 2em;
+  box-sizing: border-box;
+background: rgba(2, 1, 1, 0.13);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    0 0 15px rgba(255, 255, 255, 0.03);
+}
+
+.assets,
+.expense {
+flex: 1;
+  max-width: 260px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  color: var(--normal-color);
+  font-family: var(--font-main);
+  background: radial-gradient(circle at 30% 40%, #051f20, transparent 70%), #0a0a12;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.assets h1,
+.expense h1 {
+  font-size: var(--text-sm);
+  font-weight: var(--fw-regular);
+  opacity: 0.8;
+  margin-bottom: 0.35rem;
+}
+
+.assets h2,
+.expense h2 {
+  font-size: var(--text-size);
+  font-weight: var(--fw-bold);
+}
+
+.assets h2 {
+  color: #4ade80;
+}
+
+.expense h2 {
+  color: #f87171;
+}
+
+.assets:hover,
+.expense:hover {
+  border-color: var(--main-color);
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.25),
+    0 0 15px rgba(255, 255, 255, 0.2);
+}

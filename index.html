@@ -4,98 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles/base.css" />
-    <script type="module" src="src/scripts/index.js"></script>
+    <script type="module" src="src/modules/main.js"></script>
     <title>Online Expense Tracker</title>
   </head>
   <body>
     <main class="main">
-      <form class="search" id="search-form">
-        <input
-          id="search-input"
-          type="text"
-          class="search-input"
-          placeholder="Search for Expenses"
-        />
-
-        <button id="search-btn" class="search-btn">
-          <img src="/icons/search.svg" alt="Search" />
-        </button>
-      </form>
-
-      <section class="expenses">
-        <div class="state">
-          <div class="assets">
-            <h1 id="assets">Assets</h1>
-            <h2 id="income">400 TL</h2>
-          </div>
-
-          <div class="expense">
-            <h1 id="expenses">Expenses</h1>
-            <h2 id="outcome">-200 TL</h2>
-          </div>
+      <section class="state">
+        <div class="assets">
+          <h1 id="assets">Assets</h1>
+          <h2 id="income">400 TL</h2>
         </div>
 
-        <section class="expense-lists">
-          <div class="expense-list">
-            <h1 id="description" class="lists">Coffee</h1>
-            <h1 id="amount" class="lists">-300TL</h1>
-            <h1 id="date" class="lists">31/08/2026</h1>
-            <img class="lists" src="/icons/delete1.svg" alt="delete" />
-          </div>
-
-          <div class="expense-list">
-            <h1 id="description" class="lists">Coffee</h1>
-            <h1 id="amount" class="lists">-300TL</h1>
-            <h1 id="date" class="lists">31/08/2026</h1>
-            <img class="lists" src="/icons/delete1.svg" alt="delete" />
-          </div>
-
-          <div class="expense-list">
-            <h1 id="description" class="lists">Coffee</h1>
-            <h1 id="amount" class="lists">-300TL</h1>
-            <h1 id="date" class="lists">31/08/2026</h1>
-            <img class="lists" src="/icons/delete1.svg" alt="delete" />
-          </div>
-
-          <div class="expense-list">
-            <h1 id="description" class="lists">Coffee</h1>
-            <h1 id="amount" class="lists">-300TL</h1>
-            <h1 id="date" class="lists">31/08/2026</h1>
-            <img class="lists" src="/icons/delete1.svg" alt="delete" />
-          </div>
-
-          <div class="expense-list">
-            <h1 id="description" class="lists">Coffee</h1>
-            <h1 id="amount" class="lists">-300TL</h1>
-            <h1 id="date" class="lists">31/08/2026</h1>
-            <img class="lists" src="/icons/delete1.svg" alt="delete" />
-          </div>
-
-          <div class="expense-list">
-            <h1 id="description" class="lists">Coffee</h1>
-            <h1 id="amount" class="lists">-300TL</h1>
-            <h1 id="date" class="lists">31/08/2026</h1>
-            <img class="lists" src="/icons/delete1.svg" alt="delete" />
-          </div>
-
-          <div class="expense-list">
-            <h1 id="description" class="lists">Coffee</h1>
-            <h1 id="amount" class="lists">-300TL</h1>
-            <h1 id="date" class="lists">31/08/2026</h1>
-            <img class="lists" src="/icons/delete1.svg" alt="delete" />
-          </div>
-
-          <div class="expense-list">
-            <h1 id="description" class="lists">Coffee</h1>
-            <h1 id="amount" class="lists">-300TL</h1>
-            <h1 id="date" class="lists">31/08/2026</h1>
-            <img class="lists" src="/icons/delete1.svg" alt="delete" />
-          </div>
-        </section>
+        <div class="expense">
+          <h1 id="expenses">Expenses</h1>
+          <h2 id="outcome">-200 TL</h2>
+        </div>
       </section>
 
-      <div class="add-expense">
-        <img id="add-expense" src="/icons/add.png" alt="Add expenses" />
+      <section class="expenses">
+        <form class="search" id="search-form">
+          <input
+            id="search-input"
+            type="text"
+            class="search-input"
+            placeholder="Search for Expenses"
+          />
+
+          <button id="search-btn" class="search-btn">
+            <img src="/icons/search.svg" alt="Search" />
+          </button>
+        </form>
+
+        <section id="expenses-lists" class="expenses-lists">
+          <div id="welcome-msg" class="welcome">
+            <p>Add Your First Expense! 📝</p>
+            <p>Usage Tips 💡:</p>
+            <p>
+              ✔️ Click
+              <span
+                >'<img
+                  class="welcome-img"
+                  src="/icons/add.png"
+                  alt="Add expense"
+                />'</span
+              >
+              to add an expense.
+            </p>
+            <p>✔️ Enter the expense name, amount, and category.</p>
+            <p>✔️ Keep track of your spending in one place. 📊</p>
+            <p>✔️ Your data is stored locally in your browser. 🔒</p>
+            <p>📝 Edit and delete expenses easily.</p>
+            <p>🚀 More features coming soon!</p>
+          </div>
+        </section>
+        <!-- <section id="expense-lists" class="expense-lists">
+            <ul class="expense-list">
+              <li id="description" class="lists">Coffee</lih>
+              <li id="amount" class="lists">-300TL</li>
+              <li id="date" class="lists">31/08/2026</li>
+              <img class="lists" src="/icons/delete1.svg" alt="delete" />
+            </ul>
+          </section> -->
+      </section>
+
+      <div style="display: none;" class="create-expense">
+        <button id="create-expense-btn">
+          <img src="/icons/add.png" alt="Add expenses" />
+        </button>
       </div>
     </main>
 
@@ -107,9 +82,14 @@
         Trash <img src="/icons/bin.svg" alt="Trash bin" />
       </div>
 
-      <div class="cards">
-        <img id="add-expense" src="/icons/add.png" alt="Add expenses" />
-      </div>
+      <button id="create-expense1-btn" class="cards">
+        <img
+          id="create-new-expense-img"
+          class="create-expense"
+          src="/icons/add.png"
+          alt="Add expenses"
+        />
+      </button>
     </aside>
   </body>
 </html>

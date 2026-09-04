@@ -2,13 +2,18 @@
   background:
     radial-gradient(circle at 30% 40%, #151130, transparent 60%), #1e223d;
 }
-.light{
-    background: var(--normal-color);
+
+.light {
+  background: var(--normal-color);
+}
+
+.hidden {
+  display: none !important;
 }
 
 * {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -17,9 +22,27 @@ html {
   scroll-padding-top: 90px;
 }
 
-body,
 body {
-  margin: 1% 10%;
-  background:
-    radial-gradient(circle at 30% 40%, #051f20, transparent 60%), #0a0a12;
+  margin: 0;
+  min-height: 90vh;
+  background-color: #07080b;
+  background-image:
+    radial-gradient(circle at 50% 30%, rgba(20, 184, 166, 0.16), transparent 60%),
+    radial-gradient(circle at 85% 80%, rgba(99, 102, 241, 0.08), transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+  background-attachment: fixed;
 }
+
+/*
+cyberHorizen
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(13, 148, 136, 0.25), transparent),
+    radial-gradient(ellipse 60% 50% at 50% 110%, rgba(30, 27, 75, 0.4), transparent),
+    #090a0f;
+  background-attachment: fixed;
+}*/

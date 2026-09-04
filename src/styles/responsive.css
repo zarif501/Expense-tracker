@@ -3,18 +3,16 @@
     padding: 1em 0.5em;
 
     .search-input {
-      display: none;
       width: 75%;
       padding: 0.75em 1em;
     }
-    .search-btn{
+    .search-btn {
       align-items: center;
       text-align: center;
-    img {
+      img {
         margin-left: 0%;
       }
     }
-    
   }
 
   .expenses {
