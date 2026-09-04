@@ -1,5 +1,5 @@
 .expenses {
-position: relative;
+  position: relative;
   margin: 1.5rem auto;
   width: 95%;
   max-width: 700px;
@@ -21,7 +21,7 @@ position: relative;
 }
 
 .search {
-width: 100%;
+  width: 100%;
   max-width: 600px;
   display: flex;
   align-items: center;
@@ -35,12 +35,15 @@ width: 100%;
     border: 1px solid var(--secondary-color);
     border-radius: 2em;
     padding: 0.85rem 1.25rem;
-    background: radial-gradient(circle at 30% 40%, #051f20, transparent 60%), #0a0a12;
-      color: var(--text-color);
-      outline: none;
-        font-family: var(--font-main);
-        font-size: var(--text-sm);
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background:
+      radial-gradient(circle at 30% 40%, #051f20, transparent 60%), #0a0a12;
+    color: var(--text-color);
+    outline: none;
+    font-family: var(--font-main);
+    font-size: var(--text-sm);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
     box-shadow:
       0 6px 20px rgba(0, 0, 0, 0.25),
       0 0 15px rgba(255, 255, 255, 0.2);
@@ -71,13 +74,13 @@ width: 100%;
 
   .search-btn {
     display: flex;
-      justify-content: center;
-      align-items: center;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      padding: 0.5rem;
-      transition: transform 0.2s ease;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.2s ease;
   }
 
   .search-btn:hover {
@@ -86,7 +89,7 @@ width: 100%;
 }
 
 .expenses-lists {
-width: 100%;
+  width: 100%;
   max-width: 600px;
   flex: 1;
   padding: 0.5rem;
@@ -99,14 +102,14 @@ width: 100%;
   box-sizing: border-box;
 
   .expenses-lists::-webkit-scrollbar {
-      width: 6px;
-    }
-    .expenses-lists::-webkit-scrollbar-thumb {
-      background: var(--secondary-color);
-      border-radius: 4px;
-    }
+    width: 6px;
+  }
+  .expenses-lists::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+  }
   .expense-list {
-  width: 100%;
+    width: 100%;
     list-style: none;
     margin: 0;
     padding: 0.85rem 1.25rem;
@@ -117,9 +120,10 @@ width: 100%;
     border-radius: 1.25rem;
     background: rgba(14, 20, 27, 0.4);
     box-sizing: border-box;
-    transition: transform 0.2s ease, 
-    border-color 0.2s ease, 
-    box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
     box-shadow:
       0 6px 20px rgba(0, 0, 0, 0.25),
       0 0 5px rgba(255, 255, 255, 0.2);
@@ -142,18 +146,18 @@ width: 100%;
     font-size: var(--text-size);
     font-weight: var(--fw-regular);
   }
-.lists {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  color: var(--text-color);
-  font-family: var(--font-main);
-  font-size: var(--text-sm);
-  font-weight: var(--fw-regular);
-}
+  .lists {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    font-family: var(--font-main);
+    font-size: var(--text-sm);
+    font-weight: var(--fw-regular);
+  }
 
-/* Title text with overflow ellipsis */
-/*.lists:nth-child(1) {
+  /* Title text with overflow ellipsis */
+  /*.lists:nth-child(1) {
   flex: 2;
   text-align: left;
   white-space: nowrap;
@@ -197,7 +201,9 @@ width: 100%;
   margin: 0 !important;
   cursor: pointer;
   opacity: 0.7;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .delete-btn:hover {
@@ -246,7 +252,7 @@ width: 100%;
 }
 
 .welcome {
-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -260,10 +266,9 @@ width: 100%;
   font-size: var(--text-sm);
   background: rgba(14, 20, 27, 0.2);
 
-
   .welcome-img {
-  width: 60px;
-  height: auto;
-  vertical-align: middle;
-}
+    width: 60px;
+    height: auto;
+    vertical-align: middle;
+  }
 }
