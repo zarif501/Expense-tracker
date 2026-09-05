@@ -1,5 +1,5 @@
-import { renderExpenseForm, renderTransactions } from "./ui.js";
-import { addTransaction, getTransactions } from "./transactions.js";
+import { renderExpenseForm, renderTransactions, updateDashboardSummary } from "./ui.js";
+import { addTransaction, getTransactions, calculateTotals } from "./transactions.js";
 
 const addExpenseBtn = document.querySelector("#create-expense-btn");
 const addExpenseBtn1 = document.querySelector("#create-expense1-btn");
@@ -70,5 +70,10 @@ function handleFormSubmit(event) {
   };
 
   addTransaction(newTransaction);
+  
+  const { income, expense } = calculateTotals();
+  updateDashboardSummary(income, expense);
+
   closeForm();
 }
+

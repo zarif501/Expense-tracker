@@ -81,3 +81,16 @@ export function renderTransactions(transactions) {
     expensesLists.appendChild(item);
   });
 }
+
+export function updateDashboardSummary(incomeTotal, expenseTotal) {
+  const incomeEl = document.querySelector("#income");
+  const outcomeEl = document.querySelector("#outcome");
+
+  if (incomeEl) {
+    incomeEl.textContent = `${incomeTotal.toFixed(2)} TL`;
+  }
+
+  if (outcomeEl) {
+    outcomeEl.textContent = `-${expenseTotal.toFixed(2)} TL`;
+  }
+}
