@@ -1,7 +1,13 @@
-let transactions = [];
+import {  
+  loadTransactions,
+  saveTransactions } 
+from "./storage.js";
+
+let transactions = loadTransactions();
 
 export function addTransaction(transaction) {
   transactions.push(transaction);
+  saveTransactions(transactions);
 }
 
 export function getTransactions() {
@@ -33,5 +39,5 @@ export function calculateTotals() {
 
 export function deleteTransaction(id) {
   transactions = transactions.filter((t) => t.id !== id);
-  
+  saveTransactions(transactions);
 }

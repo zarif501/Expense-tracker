@@ -81,8 +81,6 @@ function handleFormSubmit(event) {
 
 
   addTransaction(newTransaction);
-
-  renderTransactions(getTransactions());
   
   const { income, expense } = calculateTotals();
   updateDashboardSummary(income, expense);
@@ -93,7 +91,7 @@ function handleFormSubmit(event) {
 const deleteExpenseContainer = document.querySelector("#expenses-lists");
 
 deleteExpenseContainer?.addEventListener(`click`, (e)=> {
-  
+
   const deleteBtn = e.target.closest(".delete-btn");
   if (!deleteBtn)return;
 
@@ -101,8 +99,13 @@ deleteExpenseContainer?.addEventListener(`click`, (e)=> {
 
   deleteTransaction(id);
 
-  renderTransactions(getTransactions());
-
   const { income, expense } = calculateTotals();
   updateDashboardSummary(income, expense);
 })
+
+function updateUI() {
+  renderTransactions(getTransactions());
+  const { income, expense } = calculateTotals();
+  updateDashboardSummary(income, expense);
+}
+updateUI();
