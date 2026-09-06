@@ -99,7 +99,7 @@
 .transaction-form__submit {
   background:
     radial-gradient(circle at 30% 40%, #051f20, transparent 60%), #0a0a12;
-  color: var(--normal-color);
+  color: #4ade80;
 }
 
 #cancel-new-expense {

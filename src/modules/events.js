@@ -1,5 +1,15 @@
-import { renderExpenseForm, renderTransactions, updateDashboardSummary } from "./ui.js";
-import { addTransaction, getTransactions, calculateTotals } from "./transactions.js";
+import { 
+  renderExpenseForm, 
+  renderTransactions, 
+  updateDashboardSummary 
+} from "./ui.js";
+
+import { 
+  addTransaction, 
+  getTransactions, 
+  calculateTotals, 
+  deleteTransaction 
+} from "./transactions.js";
 
 const addExpenseBtn = document.querySelector("#create-expense-btn");
 const addExpenseBtn1 = document.querySelector("#create-expense1-btn");
@@ -69,7 +79,10 @@ function handleFormSubmit(event) {
     date: dateAndTime,
   };
 
+
   addTransaction(newTransaction);
+
+  renderTransactions(getTransactions());
   
   const { income, expense } = calculateTotals();
   updateDashboardSummary(income, expense);
@@ -77,3 +90,19 @@ function handleFormSubmit(event) {
   closeForm();
 }
 
+const deleteExpenseContainer = document.querySelector("#expenses-lists");
+
+deleteExpenseContainer?.addEventListener(`click`, (e)=> {
+  
+  const deleteBtn = e.target.closest(".delete-btn");
+  if (!deleteBtn)return;
+
+  const id = Number(deleteBtn.dataset.id)
+
+  deleteTransaction(id);
+
+  renderTransactions(getTransactions());
+
+  const { income, expense } = calculateTotals();
+  updateDashboardSummary(income, expense);
+})
