@@ -91,6 +91,8 @@ export function updateDashboardSummary(incomeTotal, expenseTotal) {
   }
 
   if (outcomeEl) {
-    outcomeEl.textContent = `-${expenseTotal.toFixed(2)} TL`;
+    outcomeEl.textContent = expenseTotal > 0 
+      ? `-${expenseTotal.toFixed(2)} TL` 
+      : "0.00 TL";
   }
 }

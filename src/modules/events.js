@@ -98,6 +98,7 @@ deleteExpenseContainer?.addEventListener(`click`, (e)=> {
   const id = Number(deleteBtn.dataset.id)
 
   deleteTransaction(id);
+  renderTransactions(getTransactions());
 
   const { income, expense } = calculateTotals();
   updateDashboardSummary(income, expense);
