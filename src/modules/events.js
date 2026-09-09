@@ -110,3 +110,60 @@ function updateUI() {
   updateDashboardSummary(income, expense);
 }
 updateUI();
+
+const searchInput = document.querySelector("#search-input");
+const searchFormEl = document.querySelector("#search-form");
+searchFormEl.addEventListener("submit", (e)=>{e.preventDefault();});
+
+searchInput.addEventListener("input", (e)=>{
+  const query = e.target.value.toLowerCase().trim();
+
+  const allTransactions = getTransactions();
+
+  if (!query) {
+    renderTransactions(allTransactions);
+    return;
+  }
+  const matchingTransactions = allTransactions.filter((transaction) =>
+    transaction.title.toLowerCase().includes(query)
+  );
+  renderTransactions(matchingTransactions);
+});
+
+export function updateSearchParam(query) {
+  const url = new URL(window.location);
+
+  if (query) {
+    url.searchParams.set("search", query);
+  } else {
+    url.searchParams.delete("search");
+  }
+
+  // Updates the address bar silently
+  window.history.replaceState({}, "", url);
+}
+
+searchInput?.addEventListener("input", (e) => {
+  const query = e.target.value;
+
+  // 1. Keep URL in sync
+  updateSearchParam(query);
+
+  // 2. Filter and render
+  applySearchFilter(query);
+});
+
+// At the bottom of events.js (during startup/hydration)
+const initialParams = new URLSearchParams(window.location.search);
+const initialSearch = initialParams.get("search");
+
+if (initialSearch && searchInput) {
+  searchInput.value = initialSearch; // Fill the input box
+  applySearchFilter(initialSearch);  // Render filtered results
+} else {
+  renderTransactions(getTransactions());
+}
+
+// Summary cards always show total finances regardless of search view
+const { income, expense } = calculateTotals();
+updateDashboardSummary(income, expense);

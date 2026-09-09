@@ -50,20 +50,6 @@
     box-sizing: border-box;
   }
 
-  /*input {
-    width: 100%;
-    background:
-      radial-gradient(circle at 30% 40%, #051f20, transparent 60%), #0a0a12;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    color: var(--text-color);
-    transition: background-color 0.2s ease;
-    font-family: var(--font-main);
-    font-size: var(--text-size);
-    font-weight: var(--fw-regular);
-  }*/
-
   input:focus::placeholder {
     transition:
       transform 0.3s ease,
@@ -155,32 +141,7 @@
     font-size: var(--text-sm);
     font-weight: var(--fw-regular);
   }
-
-  /* Title text with overflow ellipsis */
-  /*.lists:nth-child(1) {
-  flex: 2;
-  text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 0.5rem;
-}
-
-/* Amount text 
-.lists:nth-child(2) {
-  flex: 1.5;
-  text-align: center;
-  font-weight: var(--fw-bold);
-}
-
-/* Date text 
-.lists:nth-child(3) {
-  flex: 1.5;
-  text-align: right;
-  font-size: 0.8rem;
-  opacity: 0.75;
-  padding-right: 0.75rem;
-}*/
+  
   #description {
     width: 200px;
     overflow-x: auto;

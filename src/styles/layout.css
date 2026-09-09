@@ -47,7 +47,6 @@
   }
 }
 
-/* Rotates the existing '+' img in HTML into an 'X' close icon */
 #create-expense-btn.active img,
 #create-expense1-btn.active img {
   transform: rotate(45deg);

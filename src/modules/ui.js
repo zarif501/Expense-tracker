@@ -1,3 +1,5 @@
+import { updateSearchParam } from "./events.js";
+
 export function renderExpenseForm() {
   const expensesLists = document.querySelector("#expenses-lists");
   const welcomeMsg = document.querySelector("#welcome-msg");
@@ -95,4 +97,20 @@ export function updateDashboardSummary(incomeTotal, expenseTotal) {
       ? `-${expenseTotal.toFixed(2)} TL` 
       : "0.00 TL";
   }
+}
+
+function applySearchFilter(query) {
+  const allTransactions = getTransactions();
+  const normalizedQuery = query.toLowerCase().trim();
+
+  if (!normalizedQuery) {
+    renderTransactions(allTransactions);
+    return;
+  }
+
+  const filtered = allTransactions.filter((item) =>
+    item.title.toLowerCase().includes(normalizedQuery)
+  );
+
+  renderTransactions(filtered);
 }
