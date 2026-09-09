@@ -24,7 +24,10 @@
   width: 100%;
   max-width: 600px;
   display: flex;
+  justify-content: space-between;
+  gap: 1em;
   align-items: center;
+  text-align: center;
   gap: 0.75rem;
   margin-bottom: 1.25rem;
   box-sizing: border-box;
@@ -72,6 +75,18 @@
   .search-btn:hover {
     transform: scale(1.1);
   }
+  .search-add-expense {
+    background: #fff;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--secondary-color);
+    border-radius: 2em;
+  }
+  .search-add-expense:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
 }
 
 .expenses-lists {
@@ -118,7 +133,7 @@
   .expense-list:hover {
     border-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   }
 
   .lists {
@@ -141,7 +156,7 @@
     font-size: var(--text-sm);
     font-weight: var(--fw-regular);
   }
-  
+
   #description {
     width: 200px;
     overflow-x: auto;

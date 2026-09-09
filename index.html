@@ -34,6 +34,17 @@
           <button id="search-btn" class="search-btn">
             <img src="/icons/search.svg" alt="Search" />
           </button>
+
+          <div>
+            <button id="create-expense1-btn" class="search-add-expense">
+              <img
+                id="create-new-expense-img"
+                class="create-expense"
+                src="/icons/add.png"
+                alt="Add expenses"
+              />
+            </button>
+          </div>
         </form>
 
         <section id="expenses-lists" class="expenses-lists">
@@ -63,10 +74,10 @@
       </section>
     </main>
 
-    <aside class="side-bar">
-      <div class="cards">Week</div>
-      <div class="cards">Month</div>
-      <div class="cards">Year</div>
+    <aside style="display: none;" class="side-bar">
+      <button style="background-color: black;" class="filter-btn" data-period="week">Week</button>
+      <button style="background-color: black;" class="filter-btn" data-period="month">Month</button>
+      <button style="background-color: black;" class="filter-btn" data-period="year">Year</button>
       <div class="cards">
         Trash <img src="/icons/bin.svg" alt="Trash bin" />
       </div>

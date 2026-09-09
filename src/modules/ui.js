@@ -93,9 +93,8 @@ export function updateDashboardSummary(incomeTotal, expenseTotal) {
   }
 
   if (outcomeEl) {
-    outcomeEl.textContent = expenseTotal > 0 
-      ? `-${expenseTotal.toFixed(2)} TL` 
-      : "0.00 TL";
+    outcomeEl.textContent =
+      expenseTotal > 0 ? `-${expenseTotal.toFixed(2)} TL` : "0.00 TL";
   }
 }
 
@@ -109,7 +108,7 @@ function applySearchFilter(query) {
   }
 
   const filtered = allTransactions.filter((item) =>
-    item.title.toLowerCase().includes(normalizedQuery)
+    item.title.toLowerCase().includes(normalizedQuery),
   );
 
   renderTransactions(filtered);
